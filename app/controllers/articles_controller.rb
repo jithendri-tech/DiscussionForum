@@ -14,7 +14,14 @@ class ArticlesController < ApplicationController
     def edit
         @article = Article.find(params[:id])
     end
-
+    
+    def search
+      if params[:search].blank?
+        @articles = Article.all
+        else
+        @articles = Article.search(params)
+        end
+    end
 
     def create
         @article = Article.new(article_params)

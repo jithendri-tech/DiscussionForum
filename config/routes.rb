@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   root to: "welcome#index"
   resources :articles do
     resources :comments
+    collection do
+      get :search
+    end
   end 
   get 'sign_up', to: 'registration#new'
   post 'sign_up', to: 'registration#create'

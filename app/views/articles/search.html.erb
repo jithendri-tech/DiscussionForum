@@ -11,11 +11,7 @@
            <%= text_field_tag :search, nil, placeholder: "Enter text to search", class: "form-control mr-2" %>
          <%= submit_tag "Search", class: "btn-flat my-3 my-0" %>
             <% end %>
-		    	
-
 		  	</p>
-       
-      
 		  </div>
 	<div class="container">
 		<% @articles.each do |article| %>
@@ -35,4 +31,6 @@
 		<% end %>
 	</div>
 </div>
+
+<%= link_to 'Back to all Articles', articles_path %>
 </section>
